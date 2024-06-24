@@ -10,21 +10,65 @@
 </head>
 <body>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+         @font-face{font-family:GT America;
+            src:url(fonts/GT-America-Expanded-Regular.eot);
+            src:local("GT America Regular"),
+            local("GT-America-Extended-Regular"),
+            url(fonts/GT-America-Expanded-Regular.eot) format("embedded-opentype"),
+            url(fonts/GT-America-Expanded-Regular.woff2) format("woff2"),
+            url(fonts/GT-America-Expanded-Regular.woff) format("woff"),
+            url(fonts/GT-America-Expanded-Regular.ttf) format("truetype");
+            font-weight:400;
+            font-style:normal
+        }
+        @font-face{font-family:GT America;
+            src:url(fonts/GT-America-Extended-Medium.eot);
+            src:local("GT America Medium"),
+            local("GT-America-Extended-Medium"),
+            url(fonts/GT-America-Extended-Medium.eot) format("embedded-opentype"),
+            url(fonts/GT-America-Extended-Medium.woff2) format("woff2"),
+            url(fonts/GT-America-Extended-Medium.woff) format("woff"),
+            url(fonts/GT-America-Extended-Medium.ttf) format("truetype");
+            font-weight:600;
+            font-style:normal
+        }
+
+        @font-face{font-family:GT America;
+            src:url(fonts/GT-America-Expanded-Black.eot);
+            src:local("GT America Black"),
+            local("GT-America-Expanded-Black"),
+            url(fonts/GT-America-Expanded-Black.eot) format("embedded-opentype"),
+            url(fonts/GT-America-Expanded-Black.woff2) format("woff2"),
+            url(fonts/GT-America-Expanded-Black.woff) format("woff"),
+            url(fonts/GT-America-Expanded-Black.ttf) format("truetype");
+            font-weight:900;
+            font-style:normal
+        }
+
+        @font-face{font-family:GT America;
+            src:url(fonts/GT-America-Expanded-Light.eot);
+            src:local("GT America Light"),
+            local("GT-America-Expanded-Light"),
+            url(fonts/GT-America-Expanded-Light.eot) format("embedded-opentype"),
+            url(fonts/GT-America-Expanded-Light.woff2) format("woff2"),
+            url(fonts/GT-America-Expanded-Light.woff) format("woff"),
+            url(fonts/GT-America-Expanded-Light.ttf) format("truetype");
+            font-weight:300;
+            font-style:normal
+        }
         body, h2, p {
-            font-family: 'Kumbh Sans', sans-serif;
+            font-family: 'GT America', sans-serif;
         }
         h2 {
+            font-family: 'GT America';
+            font-size: 28px;
+            font-weight: 400;
             text-transform: uppercase;
-            margin-bottom:10px;
-            margin-top:0;
-            font-size: 35px;
-            text-transform: uppercase;
-            font-weight: 600;
         }
         p {
-            font-size: 22px;
             font-weight: 300;
+            font-size:16px;
+            line-height: 1.3;
         }
         .wrap {
             margin:auto;
@@ -51,14 +95,15 @@
         }
         .btn-outline {
             background-color: #fff;
-            border:1px solid #000;
+            border:2px solid #000;
             color:#000;
+            font-size: 15px;
             border-radius: 10px;
-            padding: 15px 50px; 
-            text-decoration:none;
-            margin-top:20px;
-            display:inline-block;
-            font-size: 18px;
+            padding: 15px 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            line-height: 1.3;
         }
         .btn-outline:hover {
             background-color: #000;
