@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Bank</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+        body, h2, p {
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+        h2 {
+            text-transform: uppercase;
+            margin-bottom:10px;
+            margin-top:0;
+            font-size: 35px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 22px;
+            font-weight: 300;
+        }
+        .wrap {
+            margin:auto;
+            max-width: 1000px;
+            padding:40px;
+        }
+        .w-half-a {
+            width:65%;
+        }
+        .w-half-b {
+            width: 35%
+        }
+        .flex {
+            display: flex;
+        }
+        .cards {
+            max-width: 220px;
+            width: 100%;
+        }
+        .align-center {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .btn-outline {
+            background-color: #fff;
+            border:2px solid #000;
+            color:#000;
+            border-radius: 10px;
+            padding: 15px 50px; 
+            text-decoration:none;
+            margin-top:20px;
+            display:inline-block;
+            font-size: 18px;
+        }
+        .btn-outline:hover {
+            background-color: #000;
+            color:#fff;
+        }
+        @media screen and (max-width: 600px) {
+            .flex {
+                flex-direction: column;
+            }
+            .w-half-a {
+                width: 100%;
+                padding:0!important;
+            }
+            .w-half-b {
+                width: 100%;
+                padding:0!important;
+            }
+            .cards {
+                max-width: 150px;
+                width: 100%;
+                margin: 100px 0 50px -20px;
+                display: block;
+            }
+            h2 {
+                margin-top: 0;
+                margin-bottom: 20px;
+                text-align: left;
+                font-size: 30px;
+                font-weight: 400;
+            }
+            p {
+                font-size: 16px;
+                text-align: left;
+            }
+            .btn-outline {
+                border: 2px solid #000;
+                padding: 10px 40px;
+                font-size: 15px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <div class="wrap">
+        <div class="flex">
+            <div class="w-half-a" style="width: 54%;"><img src="https://9d472d1ec2.nxcli.io/newsletter/images/openbank-logo.png" alt="Open Bank" style="width: 200px"></div>
+            <div class="w-half-b" style="width: 46%;"></div>
+        </div>
+        <div class="flex">
+            <div class="w-half-b align-center" style="padding-right: 20px;">
+                <img class="cards" src="https://9d472d1ec2.nxcli.io/newsletter/images/Cons_Mark_2.png" alt="Open Bank">
+            </div>
+            <div class="w-half-a" style="padding: 50px 0;">
+                    <h2>¡Ay, no! Algo salió mal</h2>
+                    <p>No fue posible desactivar tu suscripción, por favor, vuelve a intentarlo más tarde.</p> 
+
+                    <a href="#" class="btn-outline">Entendido</a>
+            </div>
+        </div>
+    </table>
+</body>
+</html>
