@@ -10,59 +10,39 @@
 </head>
 <body>
     <style>
-         @font-face{font-family:GT America;
-            src:url(fonts/GT-America-Expanded-Regular.eot);
-            src:local("GT America Regular"),
-            local("GT-America-Expanded-Regular"),
-            url(fonts/GT-America-Expanded-Regular.eot) format("embedded-opentype"),
-            url(fonts/GT-America-Expanded-Regular.woff2) format("woff2"),
-            url(fonts/GT-America-Expanded-Regular.woff) format("woff"),
-            url(fonts/GT-America-Expanded-Regular.ttf) format("truetype");
-            font-weight:400;
-            font-style:normal
-        }
-        @font-face{font-family:GT America;
-            src:url(fonts/GT-America-Extended-Medium.eot);
-            src:local("GT America Medium"),
-            local("GT-America-Extended-Medium"),
-            url(fonts/GT-America-Extended-Medium.eot) format("embedded-opentype"),
-            url(fonts/GT-America-Extended-Medium.woff2) format("woff2"),
-            url(fonts/GT-America-Extended-Medium.woff) format("woff"),
-            url(fonts/GT-America-Extended-Medium.ttf) format("truetype");
-            font-weight:600;
-            font-style:normal
+         @font-face {
+            font-family:'GT America Expanded';
+            src: url('fonts/GTAmerica-ExpandedRegular.eot');
+            src: url('fonts/GTAmerica-ExpandedRegular.eot?#iefix') format('embedded-opentype'),
+                url('fonts/fonts/GTAmerica-ExpandedRegular.woff2') format('woff2'),
+                url('fonts/GTAmerica-ExpandedRegular.woff') format('woff'),
+                url('fonts/GTAmerica-ExpandedRegular.ttf') format('truetype'),
+                url('fonts/GTAmerica-ExpandedRegular.svg#GTAmerica-ExpandedRegular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
         }
 
-        @font-face{font-family:GT America;
-            src:url(fonts/GT-America-Expanded-Black.eot);
-            src:local("GT America Black"),
-            local("GT-America-Expanded-Black"),
-            url(fonts/GT-America-Expanded-Black.eot) format("embedded-opentype"),
-            url(fonts/GT-America-Expanded-Black.woff2) format("woff2"),
-            url(fonts/GT-America-Expanded-Black.woff) format("woff"),
-            url(fonts/GT-America-Expanded-Black.ttf) format("truetype");
-            font-weight:900;
-            font-style:normal
+        @font-face {
+            font-family: 'GT America Expanded';
+            src: url('fonts/GTAmerica-ExpandedLight.eot');
+            src: url('fonts/GTAmerica-ExpandedLight.eot?#iefix') format('embedded-opentype'),
+                url('fonts/GTAmerica-ExpandedLight.woff2') format('woff2'),
+                url('fonts/GTAmerica-ExpandedLight.woff') format('woff'),
+                url('fonts/GTAmerica-ExpandedLight.ttf') format('truetype'),
+                url('fonts/GTAmerica-ExpandedLight.svg#GTAmerica-ExpandedLight') format('svg');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
         }
 
-        @font-face{font-family:GT America;
-            src:url(fonts/GT-America-Expanded-Light.eot);
-            src:local("GT America Light"),
-            local("GT-America-Expanded-Light"),
-            url(fonts/GT-America-Expanded-Light.eot) format("embedded-opentype"),
-            url(fonts/GT-America-Expanded-Light.woff2) format("woff2"),
-            url(fonts/GT-America-Expanded-Light.woff) format("woff"),
-            url(fonts/GT-America-Expanded-Light.ttf) format("truetype");
-            font-weight:300;
-            font-style:normal
-        }
         body, h2, p {
-            font-family: 'GT America', sans-serif;
+            font-family: 'GT America Expanded', sans-serif;
         }
         h2 {
-            font-family: 'GT America';
+            font-family: 'GT America Expanded';
             font-size: 28px;
-            font-weight: 400;
+            font-weight: normal;
             text-transform: uppercase;
         }
         p {
