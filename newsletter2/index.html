@@ -1,116 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Bank</title>
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+  <title>Recuerda enviarnos tus documentos ⚠</title>
+     
+     <style>
+            @font-face {
+                font-family:'GT America Expanded';
+                src: url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedRegular.eot');
+                src: url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedRegular.eot?#iefix') format('embedded-opentype'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/fonts/GTAmerica-ExpandedRegular.woff2') format('woff2'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedRegular.woff') format('woff'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedRegular.ttf') format('truetype'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedRegular.svg#GTAmerica-ExpandedRegular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
-    </style>
-</head>
-<body>
-    <div>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
-            body, h2, p {
-                font-family: 'Kumbh Sans', sans-serif;
-            }
-            p {
+            @font-face {
+                font-family: 'GT America Expanded';
+                src: url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedLight.eot');
+                src: url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedLight.eot?#iefix') format('embedded-opentype'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedLight.woff2') format('woff2'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedLight.woff') format('woff'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedLight.ttf') format('truetype'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExpandedLight.svg#GTAmerica-ExpandedLight') format('svg');
                 font-weight: 300;
+                font-style: normal;
+                font-display: swap;
             }
-            .wrap {
-                margin:auto;
-                max-width: 1000px;
-                padding:40px;
+            
+            @font-face {
+                font-family: 'GT America Extended';
+                src: url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExtendedRegular.eot');
+                src: url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExtendedRegular.eot?#iefix') format('embedded-opentype'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExtendedRegular.woff2') format('woff2'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExtendedRegular.woff') format('woff'),
+                    url('https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/fonts/GTAmerica-ExtendedRegular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
             }
-            .w-half-a {
-                width:100%;
+
+            @font-face {
+                font-family: 'GT America Extended';
+                src: url('fonts/GTAmerica-ExtendedLight.eot');
+                src: url('fonts/GTAmerica-ExtendedLight.eot?#iefix') format('embedded-opentype'),
+                    url('fonts/GTAmerica-ExtendedLight.woff2') format('woff2'),
+                    url('fonts/GTAmerica-ExtendedLight.woff') format('woff'),
+                    url('fonts/GTAmerica-ExtendedLight.ttf') format('truetype');
+                font-weight: 300;
+                font-style: normal;
+                font-display: swap;
             }
-            .w-half-b {
-                width: 100%
+            body, h2, p {
+                font-family: 'GT America Extended', sans-serif;
             }
-            .flex {
-                display: flex;
+            h2 {
+                font-family: 'GT America Extended';
+                font-size: 28px;
+                font-weight: normal;
+                text-transform: uppercase;
             }
-            .align-center {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-            }
-            .btn-outline {
-                background-color: #fff;
-                border:2px solid #000;
-                color:#000;
-                border-radius: 10px;
-                padding: 15px 50px; 
-                text-decoration:none;
-                margin-top:20px;
-                display:inline-block;
-                font-size: 18px;
-            }
-            .btn-outline:hover {
-                background-color: #000;
-                color:#fff;
-            }
-            @media screen and (max-width: 600px) {
-                .logo {
-                    width: 180px;
-                }
-                .flex {
-                    flex-direction: column-reverse;
-                }
-                .w-half-a {
-                    width: 100%!important;
-                    padding:0!important;
-                }
-                .w-half-b {
-                    width: 100%;
-                    padding:0!important;
-                }
-                .cards {
-                    display: block;
-                }
-                h2 {
-                    margin-top: 0;
-                    margin-bottom: 20px;
-                    text-align: left;
-                    font-size: 27px;
-                    font-weight: 400;
-                }
-                p {
-                    font-size: 16px;
-                    text-align: left;
-                }
-                .btn-outline {
-                    border: 2px solid #000;
-                    padding: 10px 40px;
-                    font-size: 15px;
-                    margin-top: 10px;
-                }
-            }
-        </style>
-        <div class="wrap" style="margin:auto; max-width: 600px">
-            <div class="flex" style="display: flex;">
-                <a href="https://www.openbank.mx/promociones" target="_blank">
-                    <img style="width: 180px" class="logo" src="https://9d472d1ec2.nxcli.io/newsletter/images/openbank-logo.png" alt="Open Bank">
-                </a>
-            </div>
-            <div>
-                <div class="w-half-b" style="width: 450px;padding-top:20px;">
-                    <img style="width: 350px;" class="cards" src="https://9d472d1ec2.nxcli.io/newsletter/images/openbank.png" alt="Open Bank">
-                </div>
-                <div class="w-half-a" style="padding: 0 0 50px 0; width: 500px;">
-                        <h2 style="margin-top:0;font-size: 30px;text-transform: uppercase;line-height: 1.3; font-family: 'Kumbh Sans', sans-serif;">Queremos que sigas <span style="color:#00843d;">Open</span> a nuestras ofertas y promociones exclusivas</h2>
-                        <p style="font-weight:300; font-size: 18px;font-family: 'Kumbh Sans', sans-serif;">Sabemos que recibir muchos mensajes puede ser abrumador; si quieres dejar de hacerlo, puedes gestionar las notificaciones desde tu perfil para recibir sólo lo que a ti te interesa.</p> 
-                            
-                        <p style="font-weight:300; font-size:18px;line-height: 1.3;font-family: 'Kumbh Sans', sans-serif;">¿Aún quieres cancelar la suscripción a nuestras ofertas y promociones?</p>
-                        <a href="https://hachettefle.mx/newsletter/yes.html" class="btn" style="font-size:15px;background-color:#000; color:#fff; border-radius: 10px; padding: 15px 50px; font-family: 'Kumbh Sans', sans-serif; text-decoration:none; margin-top:20px; display:inline-block;line-height: 1.3;">Confirmar</a>
-                </div>
-            </div>
+     </style>
+ </head>
+ 
+ <body>
+  <table width="600" border="0" style="border-collapse: collapse; font-family: 'GT America Extended', verdana, sans-serif; font-weight: 300;" align="center">
+  <tr>
+	<td style="background:#000; height: 200px; padding:10px 30px;">
+        <img style="width: 180px" class="logo" src="https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/images/openbank-logo-white.png" alt="Open Bank">
+    </td>
+  </tr>
+  <tr>
+	<td style="background-color: #fff;font-size: 18px;">
+		<div style="color: #000000; text-align: left; padding: 30px 25px 20px 25px; margin: auto; line-height:1.5em;">
+			<p>¡Hola, <strong style="font-weight: bold">${name}!</strong></p>
+			<p>Tu mes gratis est&aacute; por terminar, a partir del d&iacute;a 28, se cobrarán de forma autom&aacute;tica a tu tarjeta LikeU terminaci&oacute;n 9887, $100 durante 11 meses.</p>
+
+            <p>Cancela cuando quieras llamando a la L&iacute;nea Open: 55 5169 4300 opción 2</p>
+
+            <p>• Cobertura por daños de pantalla ante robo o caída</br>
+            • Asistencia telefónica</p>
+		</div>
+        <div style="border-bottom:1px solid #999;border-top:1px solid #999;padding:25px 25px 25px;color: #000000; font-size: 13px; text-align: justify; line-height:1.5em;">
+            <p style="margin:0;line-height: 1.3;font-size: 14px;">¿No reconoces esta operación? Llámanos a la Línea Open: 55 7005 5755.<br>
+            Estamos disponibles 24/7 todo el año.</p>
         </div>
-    </table>
-</body>
+	</td>
+  </tr>
+  <tr>
+	<td style="background-color: #fff; padding: 25px 25px;border-bottom:1px solid #999">
+		<p style="font-size: 15px; font-weight: 600; margin:0 0 5px 0;"><strong>Equipo Openbank</strong></p>
+		<p style="font-size: 12px; margin:0;">Si no puedes ver este correo, ábrelo <a href="www.openbank.es" style="color:#000;"><strong>aqu&iacute;</strong></a></p>
+	</td>
+  </tr>
+  <tr>
+	<td style="background-color: #fff; color: #000; padding: 20px 25px; line-height:0.7em; text-align: justify;border-bottom: 1px solid #999;">		
+		<div style="text-align:center;margin-bottom: 10px;">
+            <p style="font-size: 14px;margin-bottom: 25px;">Entérate de todo en nuestras redes:</p>
+            <a href="https://www.instagram.com"><img src="https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/images/icons/ig.png" width="30" border="0" alt="Instagram"></a>
+            &nbsp;&nbsp;&nbsp;
+            <a href=https://"www.facebook.com"><img src="https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/images/icons/fb.png" height="26" border="0" alt="Facebook"></a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.twitter.com"><img src="https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/images/icons/x.png" width="30" border="0" alt="Twitter"></a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.youtube.com"><img src="https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/images/icons/yt.png" width="30" border="0" alt="YouTube"></a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="www.tiktok.com"><img src="https://openbank-newsletter-git-main-daryl-montalvokdcs-projects.vercel.app/images/icons/tk.png" height="26" border="0" alt="Tiktok"></a>
+        </div>
+        <br>
+		<p style="font-size: 10px;line-height: 1.3;">
+            <sup>1</sup>La Cuenta es un producto ofrecido por Openbank México, S.A., Institución de Banca Múltiple, Grupo Financiero Santander México y está garantizada por el Instituto para la Protección al Ahorro Bancario (IPAB) hasta por 400,000 Unidades de Inversión (UDIs) por persona, por banco <a href="https://www.gob.mx/ipab" style="color:#000;"><strong>www.gob.mx/ipab</strong></a>. Este no es un producto de ahorro o inversión. Consulta las comisiones, condiciones y requisitos de contratación de la Cuenta así como el listado de productos garantizados en <a style="color:#000;" href="https://www.openbank.mx"><strong>www.openbank.mx</strong></a>
+
+        <p style="font-size: 9px;line-height: 1.3;">
+            <sup>2</sup>En algunas zonas de la república mexicana el tiempo de espera puede ser de hasta 10 días naturales.</p>
+
+        <p style="font-size: 10px;line-height: 1.3;"><sup>3</sup>"Comercios autorizados" se refiere a los establecimientos habilitados para recibir pagos, depósitos o para recibir la consulta de saldos al amparo de una comisión mercantil. Conoce nuestra red de comisionistas en <a style="color:#000;"  href="https://www.openbank.mx"><strong>www.openbank.mx</strong></a></p>
+
+        <p style="font-size: 10px;line-height: 1.3;"><sup>4</sup>Las promociones y beneficios Mastercard disponibles a clientes Openbank pueden consultarse en <a style="color:#000;"  href="https://www.openbank.mx"><strong>www.openbank.mx</strong></a> o directamente con el proveedor del servicio en <a style="color:#000;" href="https://www.mastercard.com.mx/es-mx/consumidores/beneficios.html" target="_blank"><strong>www.mastercard.com.mx/es-mx/consumidores/beneficios.html</strong></a>
+        </p>
+		<br>
+	</td>
+  </tr>
+    <tr>
+        <td style="background-color: #fff; color: #000; padding: 10px 25px; line-height:0.7em; text-align: justify;">
+            <p style="font-size: 23px;font-family: 'GT America Expanded', verdana, sans-serif;">We are Open</p>
+        </td>
+    </tr>
+  </table>
+ </body>
 </html>
