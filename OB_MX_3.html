@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es" style="width:100%;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Openbank</title>
+  <style type="text/css">
+    /*EXTENDED*/
+
+    @font-face {
+      font-family: 'GT-America-Extended';
+      src:
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/84ed9e19eaf8f1791aa4cfd60f9b00f03eef6c9c3c230cd4c7a5c41717b62fff.eot') format('eot'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/d47c5aa2eec44cb68eb73b575ecb8c2f57cc9efffed810bf63090ca60de2b956.woff') format('woff'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/c3b51011028228de238c01a658770c3de46f24360e4f0963333dd21f3ac18b5f.woff2') format('woff2'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/6f3014455fe8c6b38b15e936ab9f3dc4add9037d9e5999f289c7dc31a297db39.otf') format('opentype'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/426f77721c9221bae0eef2a081d3d0ff735e8c3b03bddffb7042c541b01fd33e.ttf') format('truetype');
+      font-weight: normal;
+      mso-generic-font-family: swiss;
+
+    }
+
+    @font-face {
+      font-family: 'GT-America-Extended';
+      src:
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/5630412503f67389a6958f6731d5ad12a11079e26837dc15cb76a2d7e244e7f7.woff') format('woff'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/e9e86ada703b4abf48a3ad3756873438da81692f11a48c1528b85a54b3cad014.woff2') format('woff2'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/8cd028add0ae5588b529304f607f0fcad0ba7b2e5d3ed5804b20cf9922d6596d.otf') format('opentype'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/118b5adeba8987bab2f6284f045d82a8a34429318923d723b95e8b4430d38e4b.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+      mso-generic-font-family: swiss;
+    }
+
+    @font-face {
+      font-family: 'GT-America-Extended';
+      src:
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/11f48f7ec1d74bf5b9624a147d14e7c43a5de85ab9546950b291f74ba6af82b8.woff') format('woff'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/609a48cedc45e28f3a678199a6cb2b7df9ee7a38f11f7c674673a4ee223b2db8.woff2') format('woff2'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/f8ab76871fff579548d1fce8a68c9dae471327d628906663f3e6ddca73a6322b.otf') format('opentype'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/9f5bb618c78f368440348e1ec6f7d4a4def45d93a03974ea5e823ddf3a536c26.ttf') format('truetype');
+      font-weight: bold;
+      font-style: bold;
+      mso-generic-font-family: swiss;
+    }
+
+    /*EXPANDED*/
+
+    @font-face {
+      font-family: 'GT-America-Expanded';
+      src:
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/ce3b8ecc9e8ab903392b49a4c1ff035b4af541dc74ccefdfdf35221aead347c4.eot') format('eot'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/22043a79604efb8b0628a9a12ac502a019f8d1732458f5ec36c5fdb454ae3e9c.woff') format('woff'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/46ea870363319124b9baae5d949b5e811156870165d98985a189d2a398c33753.woff2') format('woff2'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/07513180f9ada27a3a5b99b540d01ce6ccc5cd01dda6caa75aa3baf159b28d92.otf') format('opentype'),
+        url('https://res.news.openbank.com/res/openban_mkt_prod1/2b67c9d78e669488bc60a9b83be0ec005c602650e6ef874875d0ce8eef22ae9c.ttf') format('truetype');
+      font-weight: normal;
+      mso-generic-font-family: swiss;
+    }
+
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    #phone1 #phone2 a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: inherit !important;
+    }
+
+    :root [x-apple-data-detectors=true],
+    a[x-apple-data-detectors=true] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    sup {
+      line-height: 1 !important;
+    }
+
+    .bullets-left {
+      padding-left: 20px !important;
+    }
+
+
+    /* Estilos para textos */
+    /* Estilos para los botones */
+    /* Estilos para las columnas(Layout) */
+    /* Contenedores para imagen y texto */
+    * {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* -+-+-+-+-+-+INICIO MEDIA QUERY MOBILE-+-+-+-+-+-+ */
+
+    @media screen and (max-width: 480px) {
+
+
+      /*TABLA FIX MOBILE*/
+
+      sup {
+        line-height: 1 !important;
+      }
+
+      .table-fix th {
+        font-family: 'GT-America-Expanded', sans-serif !important;
+        font-size: 10px !important;
+      }
+
+      .table-fix td {
+        font-family: 'GT-America-Extended', sans-serif !important;
+        font-size: 10px !important;
+      }
+
+      /* CINTILLO SANTANDER */
+
+      .template-column-number-cintillo {
+        /*            display: block !important;*/
+        width: 10% !important;
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+        /*            text-align: center !important;*/
+      }
+
+      .template-column-number-cintillo p {
+        width: 42px !important;
+      }
+
+      .template-column-number-cintillo p img {
+        height: 40px !important;
+        width: 40px !important;
+      }
+
+      .text-content-number-cintillo {
+        /* display: block !important; */
+        width: 40% !important;
+        padding: 20px !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+        padding-left: 0px !important;
+      }
+
+      .small-text-cintillo {
+        font-size: 16px !important;
+        line-height: 20px !important;
+      }
+
+      /* FIN CINTILLO SANTANDER */
+
+      .gutter {
+        mso-hide: all;
+        overflow: hidden;
+        max-height: 0;
+        width: 0;
+        display: none;
+        line-height: 0;
+        visibility: hidden;
+      }
+
+      .bullets-left {
+        font-size: 18px !important;
+        line-height: 24px !important;
+        text-align: left !important;
+        padding-left: 20px !important;
+      }
+
+      .template-column-number {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 20px 20px 0 !important;
+        text-align: center !important;
+      }
+
+      .templateColumnContainer {
+        display: block !important;
+        width: 100% !important;
+        margin: 20px 0 0 !important;
+      }
+
+      .templateColumnContainerFirst {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+
+      .text-content-number {
+        display: block !important;
+        width: 100% !important;
+        padding: 20px !important;
+        text-align: center !important;
+      }
+
+      .text-content-number-boton {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 20px !important;
+      }
+
+      .template-double-column {
+        display: block !important;
+        width: 100% !important;
+        padding: 20px !important;
+      }
+
+      .template-double-column-new {
+        display: block !important;
+        width: 100% !important;
+        padding: 5px 20px !important;
+      }
+
+      .template-double-column-left {
+        display: block !important;
+        width: 100% !important;
+        padding: 20px 20px 10px !important;
+      }
+
+      .template-double-column-right {
+        display: block !important;
+        width: 100% !important;
+        padding: 10px 20px 20px !important;
+      }
+
+      .template-column-image-left {
+        box-sizing: border-box !important;
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+
+      .template-column-image-sm {
+        mso-hide: none !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        width: 100% !important;
+        padding: 0px !important;
+      }
+
+      .template-column-image-right-xl {
+        mso-hide: all !important;
+        overflow: hidden !important;
+        display: none !important;
+      }
+
+      .text-content {
+        display: block !important;
+        width: 100% !important;
+        padding: 20px 20px 60px !important;
+      }
+
+      .image-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .text {
+        font-size: 18px !important;
+        line-height: 24px !important;
+      }
+
+      .small-text {
+        font-size: 18px !important;
+        line-height: 24px !important;
+      }
+
+      .footer-text span {
+        display: block;
+      }
+
+      .footer-icon-column {
+        padding: 0 0 20px 0 !important;
+      }
+
+      .footer-icon-column-margin {
+        padding: 0 8px 20px 0 !important;
+      }
+
+      .footer-icon {
+        height: 30px !important;
+      }
+    }
+
+    /* -+-+-+-+-+-+FIN MEDIA QUERY MOBILE-+-+-+-+-+-+ */
+
+    @media screen and (max-width: 440px) {
+      .title {
+        font-size: 36px !important;
+        line-height: 44px !important;
+      }
+
+    }
+
+    @media screen and (max-width: 400px) {
+      .title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+
+      .small-text-cintillo {
+        padding-left: 10px !important;
+      }
+
+      .tablaDepositos3Enlaces a {
+        font-size: 7.5px !important;
+      }
+
+    }
+
+    @media screen and (max-width: 316px) {
+
+      .title {
+        font-size: 24px !important;
+        line-height: 32px !important;
+      }
+
+      .subTitle {
+        font-size: 22px !important;
+        line-height: 30px !important;
+      }
+
+      .table-fix th {
+        font-family: 'GT-America-Expanded', sans-serif !important;
+        font-size: 8px !important;
+      }
+
+      .table-fix td {
+        font-family: 'GT-America-Extended', sans-serif !important;
+        font-size: 8px !important;
+      }
+
+      .tablaDepositos3Enlaces a {
+        font-size: 6px !important;
+      }
+
+      .footerContactInfo span {
+        font-size: 10px !important;
+      }
+
+      .footerSocialMediaLogos {
+        width: 100% !important;
+        display: block !important;
+        float: right;
+      }
+
+
+    }
+
+    @media screen and (max-width: 280px) {
+      .title {
+        font-size: 24px !important;
+        line-height: 32px !important;
+      }
+
+      .subTitle {
+        font-size: 22px !important;
+        line-height: 30px !important;
+      }
+
+      .table-fix th {
+        font-family: 'GT-America-Expanded', sans-serif !important;
+        font-size: 8px !important;
+      }
+
+      .table-fix td {
+        font-family: 'GT-America-Extended', sans-serif !important;
+        font-size: 8px !important;
+      }
+
+      .small-text-cintillo {
+        padding-left: 15px !important;
+      }
+
+    }
+
+
+    /* COLORES DEL DARKMODE */
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+      body,
+      center {
+        background: #2f2f2f !important;
+        color: #efefef !important;
+      }
+
+      .darkmodeColorBlack {
+        color: #111111 !important;
+      }
+
+      .darkmodeColorWhite {
+        color: #efefef !important;
+      }
+
+      .blackLogo {
+        display: none !important;
+      }
+
+      .whiteLogoWrapper,
+      .whiteLogo {
+        display: block !important;
+      }
+
+    }
+      
+    @media (prefers-color-scheme: dark) {
+
+      /* Custom Dark Mode Background Color */
+      .darkmode {
+        background-color: #111111 !important;
+        background-image: linear-gradient(#111111, #111111);
+      }
+
+      .darkmode p {
+        color: #ffffff !important;
+      }
+    }
+
+    /* Custom Dark Mode Background Color for Android*/
+    [data-ogsc] .darkmode {
+      background-color: #111111 !important;
+    }
+      
+    .hx .ii {
+        margin: 0!important;
+        overflow-x: hidden;
+        padding: 0;
+    }
+    .adL {
+        display: none!important;
+    }
+    .hx .gs {
+        margin: 0!important;
+        min-width: 0;
+        padding: 0!important;
+        width: initial;
+    }
+  </style>
+</head>
+<body><div class="wrapper" dir="ltr" style="max-width: 600px; margin: 0 auto;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumns darkmodeBackground"
+        style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin:0;padding:0;width:100%;max-width:600px;border-collapse:collapse !important;border-spacing:0 !important;table-layout:fixed !important;padding:0 !important;margin: 0; padding: 0; max-width: 600px;">
+            <tr>
+                <td>
+                    <img src="https://openbank-newsletter-q2k5.vercel.app/img/rrss/banner.png" width="100%" alt="Ilustración" style="margin-top:-20px">
+                </td>
+            </tr>
+            <tr>
+              <td
+                style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;">
+                <!-- Ini Bloque de texto principal -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                  style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin:0;padding:0;border-collapse:collapse !important;border-spacing:0 !important;table-layout:fixed !important;margin: 0; padding: 0;">
+                  <tr>
+                    <td class="darkmodeColorWhite"
+                      style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;font-family: 'GT-America-Extended', sans-serif; font-size: 18px; line-height: 27px; color: #111111; text-align: left; -webkit-text-size-adjust: none; padding: 20px;">
+                      <p style="margin-top:10px;margin-bottom:20px;">Cada vez estás más cerca de disfrutar la experiencia de un banco 100% digital, que además forma parte del Grupo Financiero Santander.</p>
+                      <p>Openbank está por llegar, <strong style="font-weight: 400;text-decoration: underline;">espera noticias muy pronto.</strong></p>
+                      <p style="margin-bottom:20px;">¡Ya casi nos vemos!<br>Openbank 🤗</p>
+                    </td>
+                  </tr>
+                </table>
+                <!-- End Bloque de texto principal -->
+              </td>
+            </tr>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumnsFooter darkmode" bgcolor="#000000"
+        style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin:0;padding:0;width:100%;max-width:600px;border-collapse:collapse !important;border-spacing:0 !important;table-layout:fixed !important;padding:0 !important;table-layout:auto !important;margin: 0; padding: 0; max-width: 600px; background-image: url('https://openbank-newsletter-q2k5.vercel.app/img/rrss/footer-bg.png'); background-image: linear-gradient(#000000, #000000); background-color: #000000; background-repeat: repeat;">
+            <tr>
+                <td><img src="https://openbank-newsletter-q2k5.vercel.app/img/rrss/banco-digital-2.png" border="0" width="600" alt="100% Banco. 100% Digital." class="-ms-interpolation-mode:bicubic;box-sizing:border-box;display:block;border:0;" style="max-width:100%;width:100%"></td>
+            </tr>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumnsFooter darkmode" bgcolor="#000000"
+        style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin:0;padding:0;width:100%;max-width:600px;border-collapse:collapse !important;border-spacing:0 !important;table-layout:fixed !important;padding:0 !important;table-layout:auto !important;margin: 0; padding: 0; max-width: 600px; background-image: url('https://openbank-newsletter-q2k5.vercel.app/img/rrss/footer-bg.png'); background-image: linear-gradient(#000000, #000000); background-color: #000000; background-repeat: repeat;">
+        <tr>
+          <td colspan="3" align="center" class="footer-title"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;font-size:20px;line-height:27px;-webkit-text-size-adjust:none;font-family: 'GT-America-Extended', sans-serif; font-size: 20px; line-height: 27px; -webkit-text-size-adjust: none; color: #aaaaaa; padding: 25px 20px 30px; font-weight: bold;">
+            We are Open
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" class="footer-text" align="center" valign="top"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;font-size:12px;line-height:18px;white-space:nowrap;-webkit-text-size-adjust:none;text-align: center; font-family: 'GT-America-Extended', sans-serif; font-size: 16px; line-height: 18px; white-space: nowrap; -webkit-text-size-adjust: none; color: #aaaaaa; padding: 0px 20px 20px;">
+            Entérate de todo lo que tenemos para ti.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;padding: 0 20px;">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" class="footerSocialMediaLogos"
+              style="margin:auto;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin:0;padding:0;border-collapse:collapse !important;border-spacing:0 !important;table-layout:fixed !important; margin:auto;">
+              <tr>
+                <td class="footer-icon-column-margin"
+                  style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;box-sizing:border-box;margin:0;padding:0 16px 20px 0;box-sizing: border-box; margin: 0; padding: 0 15px 20px 0;">
+                  <a target="_blank" href="https://www.instagram.com/openbank.mx?igsh=MWg4ejh3MzBwZ2pjeQ==" _tagid=""
+                    style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;display: block; margin: 0;">
+                    <img src="https://openbank-newsletter-q2k5.vercel.app/img/rrss/instagram.png" alt=""
+                      class="footer-icon" height="40"
+                      style="-ms-interpolation-mode:bicubic;box-sizing:border-box;display:block;border:0;height:40px;width:auto;margin:0;padding:0;box-sizing: border-box; display: block; border: 0; height: 40px; width: auto; margin: 0; padding: 0;">
+                  </a>
+                </td>
+                <td class="footer-icon-column-margin"
+                  style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;box-sizing:border-box;margin:0;padding:0 15px 20px 0;box-sizing: border-box; margin: 0; padding: 0 15px 20px 0;">
+                  <a target="_blank" href="https://www.facebook.com/share/gnyqBtk75JkBcPG5/?mibextid=LQQJ4d" _tagid=""
+                    style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;display: block; margin: 0;">
+                    <img src="https://openbank-newsletter-q2k5.vercel.app/img/rrss/facebook.png" alt=""
+                      class="footer-icon" height="40"
+                      style="-ms-interpolation-mode:bicubic;box-sizing:border-box;display:block;border:0;height:40px;width:auto;margin:0;padding:0;box-sizing: border-box; display: block; border: 0; height: 40px; width: auto; margin: 0; padding: 0;">
+                  </a>
+                </td>
+                <td class="footer-icon-column-margin"
+                  style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;box-sizing:border-box;margin:0;padding:0 15px 20px 0;box-sizing: border-box; margin: 0; padding: 0 15px 20px 0;">
+                  <a target="_blank" href="https://x.com/openbank_mx" _tagid=""
+                    style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;display: block; margin: 0;">
+                    <img src="https://openbank-newsletter-q2k5.vercel.app/img/rrss/x.png" alt=""
+                      class="footer-icon" height="40"
+                      style="-ms-interpolation-mode:bicubic;box-sizing:border-box;display:block;border:0;height:40px;width:auto;margin:0;padding:0;box-sizing: border-box; display: block; border: 0; height: 40px; width: auto; margin: 0; padding: 0;">
+                  </a>
+                </td>
+                <td class="footer-icon-column"
+                  style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;box-sizing:border-box;margin:0;padding:0 0 20px 0;box-sizing: border-box; margin: 0; padding: 0 0 20px 0;">
+                  <a target="_blank" href="https://www.threads.net/@openbank.mx?igshid=MzRlODBiNWFlZA==" _tagid=""
+                    style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;display: block; margin: 0;">
+                    <img src="https://openbank-newsletter-q2k5.vercel.app/img/rrss/threads.png" alt=""
+                      class="footer-icon" height="40"
+                      style="-ms-interpolation-mode:bicubic;box-sizing:border-box;display:block;border:0;height:40px;width:auto;margin:0;padding:0;box-sizing: border-box; display: block; border: 0; height: 40px; width: auto; margin: 0; padding: 0;">
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="bordered" colspan="3"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;padding: 0 20px; height: 1px; background-color: #404040; background-image: linear-gradient(#404040, #404040); ">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;">
+            <table border="0" cellpadding="0" cellspacing="0" align="left"
+              style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin:0;padding:0;border-collapse:collapse !important;border-spacing:0 !important;table-layout:fixed !important;width: 100%; height: 100%; margin: 0; padding: 0;">
+
+              <tr>
+                <td align="left" valign="middle"
+                  style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;padding: 20px;">
+
+                  <a target="_blank" href="https://www.openbank.mx/" _tagid=""
+                    style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration: none; display: block;">
+                    <img
+                      src="https://res.news.openbank.com/res/openban_mkt_prod1/1b582c53615e271e2dae74bdf2bc28619ce898168186a940d213922886b68260.png"
+                      alt="" height="30"
+                      style="-ms-interpolation-mode:bicubic;display: block; border: 0; width: auto; height: 30px; outline: none ;">
+                  </a>
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="bordered" colspan="3"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;padding: 0 20px; height: 1px; background-color: #404040; background-image: linear-gradient(#404040, #404040); ">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin: 0; padding: 20px; color:#aaaaaa; font-family: 'GT-America-Extended', sans-serif; font-size: 12px; line-height: 18px;">
+            
+            Si no ves correctamente este email, haz clic <a href="#" _tagid=""
+              _label="Mirror Page" _type="mirrorPage" target="_blank"
+              style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-weight: bold; color: #aaaaaa; text-decoration: none;">aquí</a>.
+
+            <br><br>Openbank México, S.A. Institución de Banca Múltiple, Grupo Financiero Santander México (“Openbank”) es un banco en proceso de obtener la autorización por parte de las autoridades financieras para iniciar operaciones con el público. Usaremos tu información con cuidado y sólo para los fines que nos autorices. Consulta nuestro <a href="https://www.openbank.mx/aviso-privacidad" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-weight: bold; color: #aaaaaa; text-decoration:none;">Aviso de privacidad</a>.
+
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"
+            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin: 0; padding: 0 20px 30px; color:#aaaaaa; font-family: 'GT-America-Extended', sans-serif; font-size: 12px; line-height: 18px; text-align: center;">
+            <a href="#" style="color:#aaaaaa;text-decoration: none;">Unsubscribe</a>
+          </td>
+        </tr>
+      </table></div></body></html>
