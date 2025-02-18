@@ -461,9 +461,9 @@
         width: initial;
     }
     @media screen and (max-width: 480px) {
-      p {
-     font-size: 8px!important; 
-    }
+      .templateColumnsFooter p,.templateColumnsFooter {
+      font-size: 12px!important; 
+      }
     }
   </style>
 </head>
@@ -489,7 +489,7 @@
             </tr>
             <tr>
                 <td style="padding:0 20px 10px 20px;">
-                    <p style="font-family: 'GT-America-Extended', sans-serif; font-size: 16px; line-height: 27px; color: #000000; text-align: center; -webkit-text-size-adjust: none;">Desde hoy ya puedes comprar<br>y pagar suscripciones o servicios en línea<br>con tu Cuenta Débito Open +. <img src="https://openbank-newsletter-q2k5.vercel.app/Fondeo/Fondeo_N4/img/icon-card2.png" alt="" style="width: 16px;"></p>
+                    <div style="max-width: 400px; margin:auto;"><p style="font-family: 'GT-America-Extended', sans-serif; font-size: 16px; line-height: 27px; color: #000000; text-align: center; -webkit-text-size-adjust: none;">Desde hoy ya puedes comprar y pagar suscripciones o servicios en línea con tu Cuenta Débito Open +. <img src="https://openbank-newsletter-q2k5.vercel.app/Fondeo/Fondeo_N4/img/icon-card2.png" alt="" style="width: 16px;"></p></div>
                 </td>
             </tr>
             <tr>
@@ -610,7 +610,7 @@
           <td colspan="3" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;mso-default-height:100%;mso-default-width:100%;mso-space-above:no;mso-space-below:no;margin: 0; padding: 20px; color:#aaaaaa; font-family: 'GT-America-Extended', sans-serif; font-size: 14px; line-height: 18px;text-align: center;">
             <p style="margin:0;word-wrap: break-word;text-wrap: wrap; margin-bottom:10px;">Si quieres dejar de recibir estos mensajes, da clic <a href="" _tagid="" _label="Mirror Page" _type="mirrorPage" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-weight: bold; color: #aaaaaa; text-decoration: none;">aquí</a>.</p>
             <p style="margin:0;word-wrap: break-word;text-wrap: wrap;margin-bottom:10px;"><a href=https://www.openbank.mx/ target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-weight: bold; color: #aaaaaa; text-decoration: none;display:inline-block;">Legales</a> | <a href=https://www.openbank.mx/ target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-weight: bold; color: #aaaaaa; text-decoration: none;display:inline-block;">Aviso de privacidad</a></p>
-            <%@ include view='obk_unsubsChannel_MX' %>
+            <p><%@ include view='obk_unsubsChannel_MX' %></p>
           </td>
         </tr>
       </table></div></body></html>
