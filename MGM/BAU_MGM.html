@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+body { font-family: 'Inter', Helvetica, Arial, sans-serif; background-color: #F0F2F5; margin: 0; padding: 0; }
+
+.container {
+    max-width: 600px; margin: 20px auto; background: #ffffff; border-radius: 40px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.12) }
+
+/* Header */
+.header-wrap {
+    background: linear-gradient(180deg, #beebff 0%, #beebff 100%); position: relative; }
+
+.header-img {
+    width: 100%; display: block; border-bottom: 6px solid #8c003c; align: left; }
+
+.logo-top {
+    position: absolute; top: 30px; left: 30px; width: 132px; z-index: 2; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(180deg, #beebff 0%, #beebff 100%); padding: 42px 30px 34px; text-align: left; position: relative; }
+
+.hero::before {
+    content: ""; position: absolute; top: -18px; right: -10px; width: 130px; height: 130px; border-radius: 50%; filter: blur(2px); }
+
+.hero-tag {
+    display: inline-block;
+    color: #8c003c;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+	border: 1px solid #8c003c;
+
+}
+
+.hero-title {
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 1;
+    color: #8c003c;
+    margin: 10px 0 14px;
+    letter-spacing: -1.4px;
+}
+
+.hero-p {
+    color: #8c003c;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 18px 0;
+}
+
+.hero-spot {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    color: #8c003c;
+    border: 1px solid rgba(227,255,0,0.3);
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 4px 0 22px;
+}
+
+/* CTA */
+.btn-main {
+    display: inline-block;
+    background: #8c003c;
+    color: #beebff;
+    padding: 18px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+/* Benefit grid */
+.benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.benefit-item {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 22px 18px;
+    text-align: center;
+    color: #000000;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    border: 1px solid rgba(15,46,46,0.08);
+}
+
+.benefit-item .kicker {
+    display: inline-block;
+    background: #ffc8c3;
+    color: #001478;
+    font-size: 17px;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.benefit-item strong {
+    display: block;
+    font-size: 19px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.benefit-item span {
+    font-size: 17px;
+    line-height: 1.35;
+    color: #4A5D5B;
+}
+
+/* Promo section */
+.promo-container {
+    padding: 30px 20px;
+    background: #FFFFFF;
+}
+
+.section-label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #7C7C7C;
+    text-transform: uppercase;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    display: block;
+    letter-spacing: 0.4px;
+}
+
+.promo-card {
+    background: linear-gradient(180deg, #F8F9FB 0%, #F8F9FB 100%);
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+	align: center;
+    border: 1px solid #EEE;
+}
+
+.promo-badge {
+    background: #000000;
+    color: #FFFFFF;
+    min-width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	align: center;
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 18px;
+    flex-shrink: 0;
+}
+
+.promo-info h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.promo-info p {
+    margin: 6px 0 0 0;
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.45;
+}
+
+/* Highlight banner */
+.highlight {
+    padding: 0 30px 38px 30px;
+    text-align: center;
+}
+
+.highlight-card {
+    background: linear-gradient(180deg, #FFFFFF 1%, #0f2e2e 810%);
+    padding: 30px 24px;
+    border-radius: 30px;
+    border: 1px solid #efefef;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.07);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight p {
+    margin: 0;
+    color: #4F5B5A;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight h2 {
+    margin: 10px 0;
+    font-size: 48px;
+    line-height: 1;
+    color: #0F2E2E;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight small {
+    display: block;
+    font-size: 12px;
+    color: #7A7A7A;
+    margin-top: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+ /* Footer con Datos Reales */
+.footer { background: #000000; padding: 25px 20px 24px; text-align: center; color: #FFFFFF; font-size: 11px; border-top: 1px solid #2a2a2a; }
+.footer-title { font-size: 20px; line-height: 27px; font-weight: 800; color: #FFFFFF; margin: 0 0 15px 0; }
+.footer-text { font-size: 15px; line-height: 1; color: #FFFFFF; margin: 0 0 22px 0; }
+.footer-socials { width: 100%; text-align: center; margin: 0 auto 22px auto; padding: 10px 150px 7px }
+.footer-socials td { padding: 0 10px; }
+.footer-socials a { display: block; text-decoration: none; }
+.footer-socials img { display: block; width: 36px; height: 36px; border-radius: 10px; border: 0; }
+.footer-divider { height: 1px; background: #3a3a3a; margin: 0 auto 15px auto; width: 100%; }
+.footer-brand { padding: 0 0 15px 0; }
+.footer-brand img { display: block; width: 150px; max-width: 100%; height: auto; margin: 0 auto; }
+.footer-legal { color: #aaaaaa; font-size: 11px; line-height: 18px; text-align: center; margin-top: 18px; }
+.footer-legal a { color: #aaaaaa; text-decoration: underline; }
+
+	
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-wrap">
+        <img src="https://www.openbank.mx/assets/Logo_Openbank_Blanco.png" class="logo-top" alt="Openbank" style="display: block" align="left">
+        <img src="https://www.openbank.mx/assets/Header_BAU-MGM.png" class="header-img" alt="Tarjeta 3D" align="center">
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <span class="hero-tag">Comparte Openbank</span>
+
+        <h1 class="hero-title">Recibe $200 por cada amigo o familiar que invites</h1>
+		<br>
+
+        <p class="hero-p">
+      <strong>Name</strong>, es momento de compartir la experiencia Open. Cada persona que invites gana <strong>$100</strong> al contratar su cuenta Open y tú recibes <strong>$200</strong>.</p>
+
+	  <a href="https://www.openbank.mx/promociones" class="btn-main">Invita ahora</a>
+
+		
+  </div>
+
+    <!-- PASOS -->
+    <div class="promo-container">
+        <span class="section-label">Solo necesitas estos pasos</span>
+
+        <div class="promo-card">
+          <div class="promo-badge">1</div>
+          <div class="promo-info">
+            <h4>Inicia sesión</h4>
+              <p>Si ya tienes cuenta Open, hazlo desde tu app u Open Web, de lo contrario, contrata tu cuenta en pocos pasos.</p>
+            </div>
+        </div>
+
+        <div class="promo-card">
+            <div class="promo-badge">2</div>
+            <div class="promo-info">
+                <h4>Da clic en el menú</h4>
+                <p>Y selecciona la opción <strong>"Invita a un amigo".</strong></p>
+            </div>
+        </div>
+		
+		<div class="promo-card">
+            <div class="promo-badge">3</div>
+          <div class="promo-info">
+            <h4>Genera tu código de invitación</h4>
+              <p>Hazlo por cada amigo o familiar<sup>1</sup> que quieras referir. ¡Y listo!</p>
+            </div>
+        </div>
+    </div>
+	
+	
+	    <h3 style="font-size: 25px; font-weight: 800; margin-bottom: 25px; text-align: center;">Recuerda que...</h3>
+	
+
+    <!-- BENEFICIOS -->
+    <div class="benefit-grid">
+        <div class="benefit-item">
+          <span class="kicker">Para invitar</span>
+            <strong>Debes de tener una cuenta Open</strong>
+            <span>Si aún no cuentas con ella, contrátala para recibr el bono en tu cuenta.</span>
+        </div>
+
+        <div class="benefit-item">
+            <span class="kicker">Tu invitado</span>
+            <strong>Debe de usar su código</strong>
+            <span>Al contratar su cuenta desde la app y depositar $1,000 dentro de los primeros 30 días.</span>
+        </div>
+    </div>
+
+ <br><br>
+    <!-- CTA FINAL -->
+    <div style="padding: 0 30px 40px 30px; text-align: center;">
+        <a href="https://www.openbank.mx/promociones" class="btn-main">Invitar desde App Openbank</a>
+		<br><br>
+        <p style="margin-top:20px; font-size:17px; color:#666;">
+            Si llevas al cine a tus amigos, también a tu banco.<br>Openbank ♥
+        </p>
+		<p style="margin-top:20px; font-size:17px; color:#666;"><strong>100% BANCO. 100% DIGITAL</strong></p>
+
+    </div>
+
+	<div class="footer">
+    <p class="footer-title">Tu Vida Open</p>
+
+    <p class="footer-text">Entérate de todo lo que tenemos para ti.</p>
+
+    <table class="footer-socials" border="0" cellpadding="0" cellspacing="0" role="presentation" align="center">
+        <tr>
+            <td>
+                <a href="https://www.instagram.com/openbank.mx?igsh=MWg4ejh3MzBwZ2pjeQ==" target="_blank">
+                    <img src="https://www.openbank.mx/assets/static/generic/instagram.png" alt="Instagram">
+                </a>
+            </td>
+            <td>
+                <a href="https://www.facebook.com/share/gnyqBtk75JkBcPG5/?mibextid=LQQJ4d" target="_blank">
+                    <img src="https://www.openbank.mx/assets/static/generic/facebook.png" alt="Facebook">
+                </a>
+            </td>
+            <td>
+                <a href="https://x.com/openbank_mx" target="_blank">
+                    <img src="https://www.openbank.mx/assets/static/generic/x.png" alt="X">
+                </a>
+            </td>
+            <td>
+                <a href="https://www.threads.net/@openbank.mx?igshid=MzRlODBiNWFlZA==" target="_blank">
+                    <img src="https://www.openbank.mx/assets/static/generic/threads.png" alt="Threads">
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-brand">
+        <img src="https://www.openbank.mx/assets/static/generic/bysantander.png" alt="By Santander">
+    </div>
+
+    <div class="footer-divider" style="margin-bottom: 18px;"></div>
+
+    <div class="footer-legal">
+        <p style="margin: 0 0 12px 0;">
+            <sup>1</sup><strong>13% de rendimiento anual fijo.</strong> Tasa sujeta a cambios sin previo aviso. GAT Nominal 13.88% GAT Real 9.58%. Antes de impuestos. Valores calculados para un rango de inversión de $0.01 y hasta $40,000.00, pesos M.N., en cuentas sin vencimiento ni plazo definido y sin comisiones, a un plazo de 1 día.<strong>7.3% de rendimiento anual fijo.</strong> Tasa sujeta a cambios sin previo aviso. GAT Nominal 7.57% GAT Real 3.49%. Antes de impuestos. Valores calculados para un rango de inversión de $40,000.01 y hasta $1,000,000.00, pesos M.N., en cuentas sin vencimiento ni plazo definido y sin comisiones, a un plazo de 1 día.<strong>7.0% de rendimiento anual fijo.</strong> Tasa sujeta a cambios sin previo aviso. GAT Nominal 7.25% GAT Real 3.18%. Antes de impuestos. Valores calculados para un rango de inversión de $1,000,000.01 pesos M.N., en adelante, en cuentas sin vencimiento ni plazo definido y sin comisiones, a un plazo de 1 día. Fecha de cálculo vigente a partir del 10 de marzo de 2026 y hasta el 10 de Septiembre de 2026. La GAT Real es el rendimiento que obtendrías después de descontar la inflación estimada. Sujeta a cambios sin previo aviso, el cálculo específico por operación se entrega al momento de contratación. Para fines informativos y de comparación.
+        </p>
+        <p style="margin: 0 0 12px 0;">
+            <sup>2</sup>Conoce términos y condiciones de la promoción "Cinepolis-2", <a href="https://www.openbank.mx/cinepolis-2">aquí</a>
+        </p>
+        <p style="margin: 0 0 12px 0;">
+            <sup>3</sup>Con la tarjeta de tu Cuenta de Débito Light puedes retirar efectivo en caja al pagar tus compras del súper en Bodega Aurrera, Sam´s Club, Walmart, La Comer, Sumesa y Fresko. El servicio y las comisiones están sujetos a las condiciones de cada establecimiento, las cuales pueden cambiar sin previo aviso; te recomendamos consultar directamente en el comercio.
+        </p>
+        <p style="margin: 15px 0 0 0; opacity: 0.7;">
+            Para dejar de recibir estas noticias, <a href="#">haz clic aquí</a>.
+        </p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
